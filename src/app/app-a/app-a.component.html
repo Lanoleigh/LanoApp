@@ -1,0 +1,58 @@
+<div class="border">
+  <div class="heading">
+    <p>
+      Approved agents
+    </p>
+  </div>
+  <div class="grid">
+    <div class="col-6">
+      <input type="text" id="searchA" onkeyup="mySearch({listofagencies})" placeholder="Search..">
+      <script>
+        function mySearch(agency) {
+          var input, filter, i, sA, sI;
+          input = document.getElementsByName('searchA');
+          filter = input.values.toUpperCase();
+
+          for (i = 1; i < listofagencies.length; i++) {
+            sI = filter[i];
+            sA = toUpperCase(agency)[i];
+            if (sA != sI) {
+              listofagencies[i] = "";
+            }
+
+          }
+        }
+      </script>
+
+      <p-scrollPanel [style]="{width: '500px', height: '400px'}">
+        <div class="content ">
+          <p-card *ngFor="let item of agentData">
+            <h4>{{item.name}}</h4>
+            <p-button (click)="agentClicked(item)">View agents</p-button>
+          </p-card>
+
+        </div>
+      </p-scrollPanel>
+    </div>
+    <div class="col-6">
+
+      <p-scrollPanel [style]="{width:'500px', height: '300px'}">
+        <div class="agentinfo">
+          <div *ngIf="agents">
+
+            <div *ngFor="let item of agents">
+              <p-card>
+                {{item.name}}
+                {{item.email}}
+                {{item.mobile}}
+              </p-card>
+            </div>
+
+          </div>
+
+        </div>
+      </p-scrollPanel>
+    </div>
+  </div>
+
+</div>

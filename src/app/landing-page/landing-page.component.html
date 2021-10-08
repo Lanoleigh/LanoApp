@@ -1,0 +1,44 @@
+<p>Mooikloof Ridge</p>
+<section>
+  <div></div>
+  <nav>
+    <ul class="menuItems">
+      <li><a [routerLink]="['/landing-page/home']" data-item='Home'>Home</a></li>
+      <li>
+        <a data-item='General Info'>General Info</a>
+        <ul>
+          <li><a [routerLink]="['/landing-page/general-info']" data-item='Office Operating Hours'>Office Operating
+              Hours</a></li>
+          <li><a [routerLink]="['/landing-page/covid-r']" data-item='Covid-19 regulations'>Covid-19 Regulations</a></li>
+          <li><a [routerLink]="['/landing-page/load-ss']" data-item='Load shedding schedule'>Load Shedding Schedule</a>
+          </li>
+        </ul>
+      </li>
+      <li><a data-item='Estate security'>Estate security</a>
+        <ul>
+          <li><a [routerLink]="['/landing-page/protect']" data-item='Security details'>Security details</a></li>
+          <li><a [routerLink]="['/landing-page/anon-t']" data-item='Anonymous tip'>Anonymous tip</a></li>
+        </ul>
+      </li>
+      <li><a [routerLink]="['/landing-page/app-a']" data-item='Approved Agents'>Approved Agents</a></li>
+      <li><a [routerLink]="['/landing-page/contact']" data-item='Contact Us'>Contact Us</a></li>
+    </ul>
+  </nav>
+
+</section>
+
+
+<!-- Footer starts-->
+<footer>
+
+  <!-- Copyright -->
+  <!-- ❤️  -->
+  <div class="footer-copyright text-center">&copy; Developed with by
+    <a href="#" class="white-text" target="_blank">Zalano Poole</a>. <a href="#" target="_blank">Check my other pens
+    </a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+<router-outlet></router-outlet>
